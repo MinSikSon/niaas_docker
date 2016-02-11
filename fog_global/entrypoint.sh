@@ -11,11 +11,11 @@ mysql -uroot -Dmysql -e"flush privileges;"
 echo "flush privileges;"
 /etc/init.d/mysql restart
 # admit join in mysql from remote;
-mysql -uroot -pdir7413 -e"INSERT INTO mysql.user (host,USER,password) VALUES ('%','root',password('dir7413'));"
+mysql -uroot -p<your password> -e"INSERT INTO mysql.user (host,USER,password) VALUES ('%','root',password('<your password>'));"
 echo "INSERT INTO mysql.user (host,USER,password) VALUES ('%','root',password('<your password>'));"
-mysql -uroot -pdir7413 -e"GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';"
+mysql -uroot -p<your password> -e"GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';"
 echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';"
-mysql -uroot -pdir7413 -e"FLUSH PRIVILEGES;"
+mysql -uroot -p<your password> -e"FLUSH PRIVILEGES;"
 echo "FLUSH PRIVILEGES;"
 /etc/init.d/mysql restart
 
