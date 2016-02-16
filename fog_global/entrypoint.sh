@@ -28,9 +28,9 @@ forever start app.js
 
 
 # diamond
-sed -i "s/host = graphite/host = $GRAPHITE_HOST/g" /etc/diamond/diamond.conf
-sed -i "s/# interval = 300/interval = 10/g" /etc/diamond/diamond.conf
-diamond
+#sed -i "s/host = graphite/host = $GRAPHITE_HOST/g" /etc/diamond/diamond.conf
+#sed -i "s/# interval = 300/interval = 10/g" /etc/diamond/diamond.conf
+#diamond
 
 
 # nginx

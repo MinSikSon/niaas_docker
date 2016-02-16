@@ -1,4 +1,5 @@
-FROM ubuntu:14.04
+#FROM ubuntu:14.04
+FROM resin/rpi-raspbian:jessie
 
 # nginx
 RUN apt-get update
@@ -25,12 +26,11 @@ RUN npm install -g forever
 RUN apt-get install -y mysql-server
 
 # diamond
-#RUN apt-get install -y git
-WORKDIR /tmp
-RUN git clone https://github.com/BrightcoveOS/Diamond.git
-RUN cd Diamond && git checkout v3.4 && make deb
-RUN dpkg -i Diamond/build/diamond_3.4.0_all.deb
-RUN cp /etc/diamond/diamond.conf.example /etc/diamond/diamond.conf
+#WORKDIR /tmp
+#RUN git clone https://github.com/BrightcoveOS/Diamond.git
+#RUN cd Diamond && git checkout v3.4 && make deb
+#RUN dpkg -i Diamond/build/diamond_3.4.0_all.deb
+#RUN cp /etc/diamond/diamond.conf.example /etc/diamond/diamond.conf
 
 # run sh
 #WORKDIR /
