@@ -21,7 +21,7 @@ var connection = mysql.createConnection({
     host : '10.0.0.10',
     port : 9906,
     user : 'root',
-    password : 'dir7413'
+    password : '<your password>'
 });
 var query_create_db = 'CREATE DATABASE sms';
 var query_use = 'USE sms';
